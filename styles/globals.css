@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 33, 33, 66;
+    --background-end-rgb: 30, 66, 66;
   }
 }
 
@@ -24,4 +24,66 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    color: grey;
+}
+
+.List {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.List-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.List ul {
+  margin: 0;
+  padding: 0;
+}
+
+.List li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.List li button {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: gray;
+  cursor: pointer;
+}
+
+.List-form {
+  margin-top: auto;
+}
+
+.List-input {
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  flex-grow: 1;
+}
+
+.List-button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15%;
+  color: white;
+  padding: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
